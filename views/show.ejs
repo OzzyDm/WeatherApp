@@ -13,7 +13,9 @@
         <input type="text" placeholder="City" id="find" />
         <button id="submit">Search</button>
         <div class="show">
-          <div class="temp"><%=response.data.main.temp%>&#176;</div>
+          <div class="temp">
+            <%=(Math.floor(response.data.main.temp))%>&#176;
+          </div>
           <div class="city">
             <%=response.data.name%>, <%=response.data.sys.country%>
           </div>
