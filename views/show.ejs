@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <title>WeatherApp</title>
   </head>
   <body>
     <div class="container">
-      <form id="searchForm">
-        <input type="text" placeholder="City" />
+      <form id="searchForm" method="GET" action="/search">
+        <input type="text" placeholder="City" id="find" />
         <button id="submit">Search</button>
         <div class="show">
-          <div class="City"></div>
+          <div class="desc"><%=response.data.weather[0].description%></div>
+          <div class="temp"><%=response.data.main.temp%></div>
+          <div class="City">
+            <%=response.data.name%>, <%=response.data.sys.country%>
+          </div>
         </div>
       </form>
     </div>
