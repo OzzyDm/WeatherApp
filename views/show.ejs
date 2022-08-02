@@ -10,9 +10,12 @@
   <body>
     <div class="container">
       <form id="searchForm" action="/search" method="GET">
-        <input type="text" placeholder="City" id="find" />
+        <input type="search" placeholder="City" id="find" name="q" />
         <button id="submit">Search</button>
         <div class="show">
+          <div class="img">
+            <img src="" alt="" />
+          </div>
           <div class="temp">
             <%=(Math.floor(response.data.main.temp))%>&#176;
           </div>
