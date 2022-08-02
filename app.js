@@ -26,7 +26,7 @@ app.get("/", async function (req, res) {
 
 app.get("/search", async function (req, res) {
   try {
-    const response = await weather("ankara", weatherAPI);
+    const response = await weather(req.query.q, weatherAPI);
     res.render("show", { response });
   } catch (error) {
     console.log(error);
