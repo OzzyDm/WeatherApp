@@ -20,6 +20,11 @@
 }
 .desc {
   font-size: 20px;
+  text-transform: capitalize;
+}
+
+.feels {
+  font-size: 18px;
 }
 
 form {

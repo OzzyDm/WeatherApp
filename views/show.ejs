@@ -12,10 +12,9 @@
       <form id="searchForm" action="/search" method="GET">
         <input type="search" placeholder="City" id="find" name="q" />
         <button id="submit">Search</button>
-        <div class="show">
-          <div class="img">
-            <img src="" alt="" />
-          </div>
+        <div>
+          <img src="http://openweathermap.org/img/wn/<%=response.data.weather[0].icon%>@2x.png" alt="">
+        </div>
           <div class="temp">
             <%=(Math.floor(response.data.main.temp))%>&#176;
           </div>
@@ -23,6 +22,7 @@
             <%=response.data.name%>, <%=response.data.sys.country%>
           </div>
           <div class="desc"><%=response.data.weather[0].description%></div>
+          <div class="feels">Feels like <%=(Math.floor(response.data.main.feels_like))%>&#176</div>
         </div>
       </form>
     </div>
