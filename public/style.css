@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+#searchForm {
+  height: 450px;
+  width: 300px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -12,23 +17,46 @@
 }
 
 .temp {
-  font-size: 50px;
+  font-size: 60px;
+  margin-left: 10px;
 }
 
 .city {
-  font-size: 20px;
+  margin-top: 20px;
+  font-size: 30px;
 }
 .desc {
-  font-size: 20px;
+  font-size: 30px;
   text-transform: capitalize;
 }
 
 .feels {
-  font-size: 18px;
+  font-size: 25px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
 }
 
 form {
-  border: 1px solid black;
+  border: 3px solid black;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 3em;
+}
+
+input {
+  font-size: 20px;
+  border-radius: 1em;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 10px;
+}
+
+.search {
+  display: flex;
+}
+
+button {
+  font-size: large;
 }

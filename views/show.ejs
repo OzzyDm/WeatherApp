@@ -10,9 +10,11 @@
   <body>
     <div class="container">
       <form id="searchForm" action="/search" method="GET">
-        <input type="search" placeholder="City" id="find" name="q" />
-        <button id="submit">Search</button>
-        <div>
+        <div class="search">
+        <input type="search" placeholder="Enter a city" id="find" name="q" />
+        <button id="submit">&#128269;</button>
+      </div>
+        <div class="icon">
           <img src="http://openweathermap.org/img/wn/<%=response.data.weather[0].icon%>@2x.png" alt="">
         </div>
           <div class="temp">
