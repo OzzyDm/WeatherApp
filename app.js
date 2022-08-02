@@ -19,7 +19,7 @@ app.get("/", async function (req, res) {
     const response = await weather("Toronto", weatherAPI);
     res.render("show", { response });
   } catch (error) {
-    console.log(error);
+    console.log("error");
   }
 });
 
@@ -28,7 +28,7 @@ app.get("/search", async function (req, res) {
     const response = await weather(req.query.q, weatherAPI);
     res.render("show", { response });
   } catch (error) {
-    console.log(error);
+    console.log("error");
   }
 });
 
