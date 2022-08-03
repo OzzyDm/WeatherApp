@@ -23,7 +23,7 @@
             <%=(Math.floor(response.data.main.temp))%>&#176;
           </div>
           <div class="city">
-            <%=response.data.name%>, <%=response.data.sys.country%>
+           <b> <%=response.data.name%>, <%=response.data.sys.country%> </b>
           </div>
           <div class="desc"><%=response.data.weather[0].description%></div>
           <div class="feels">Feels like <%=(Math.floor(response.data.main.feels_like))%>&#176</div>
