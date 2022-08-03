@@ -10,7 +10,7 @@ async function weather(city, weatherAPI) {
       );
       return response;
     } catch (error) {
-      console.log("error");
+      return "There is no such place!";
     }
   }
 }
