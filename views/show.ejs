@@ -15,7 +15,8 @@
         <button id="submit">&#128269;</button>
       </div>
         <div class="icon">
-          <img src="http://openweathermap.org/img/wn/<%=response.data.weather[0].icon%>@2x.png" alt="">
+          
+          <img src="icons/<%=response.data.weather[0].icon%>.svg" alt="">
         </div>
           <div class="temp">
             <%=(Math.floor(response.data.main.temp))%>&#176;
