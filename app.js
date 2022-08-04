@@ -6,7 +6,6 @@ const app = express();
 const port = 3000;
 
 const { weather } = require("./public/javascript/search");
-const { response } = require("express");
 dotenv.config({ path: ".env" });
 const weatherAPI = process.env.weatherAPI;
 
