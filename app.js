@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 
 const { weather } = require("./public/javascript/search");
+const { response } = require("express");
 dotenv.config({ path: ".env" });
 const weatherAPI = process.env.weatherAPI;
 
@@ -27,6 +28,7 @@ app.get("/search", async function (req, res) {
   try {
     const response = await weather(req.query.q, weatherAPI);
     res.render("show", { response });
+    console.log(response.data);
   } catch (error) {
     res.redirect("/");
   }

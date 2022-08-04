@@ -1,17 +1,14 @@
 const axios = require("axios");
+const e = require("express");
 
 async function weather(city, weatherAPI) {
-  if (!city) {
-    return console.log("not found");
+  if (city !== undefined || typeof city !== "number") {
+    const response = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherAPI}&units=metric`
+    );
+    return response;
   } else {
-    try {
-      const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherAPI}&units=metric`
-      );
-      return response;
-    } catch (e) {
-      console.log(e);
-    }
+    console.log("error");
   }
 }
 
