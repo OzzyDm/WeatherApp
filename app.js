@@ -18,7 +18,7 @@ app.get("/", async function (req, res) {
     const response = await weather("Toronto", weatherAPI);
     res.render("show", { response });
   } catch (error) {
-    res.redirect("/");
+    console.log("error");
   }
 });
 
