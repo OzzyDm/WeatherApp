@@ -3,7 +3,6 @@ const dotenv = require("dotenv");
 const path = require("path");
 
 const app = express();
-const port = 3000;
 
 const { weather } = require("./public/javascript/search");
 dotenv.config({ path: ".env" });
@@ -31,7 +30,7 @@ app.get("/search", async function (req, res) {
     res.redirect("/");
   }
 });
-
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
