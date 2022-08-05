@@ -18,14 +18,18 @@ app.get("/", async function (req, res) {
     const response = await weather("Toronto", weatherAPI);
     res.render("show", { response });
   } catch (error) {
-    console.log("error");
+    res.redirect("/");
   }
 });
 
 app.get("/search", async function (req, res) {
   try {
     const response = await weather(req.query.q, weatherAPI);
-    res.render("show", { response });
+    if (!response) {
+      res.redirect("/");
+    } else {
+      res.render("show", { response });
+    }
   } catch (error) {
     res.redirect("/");
   }
