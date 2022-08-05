@@ -27,7 +27,6 @@ app.get("/search", async function (req, res) {
   try {
     const response = await weather(req.query.q, weatherAPI);
     res.render("show", { response });
-    console.log(response.data);
   } catch (error) {
     res.redirect("/");
   }
